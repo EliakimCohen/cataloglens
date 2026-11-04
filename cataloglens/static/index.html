@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CatalogLens — Product data, inspected</title>
+  <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a href="/" class="brand"><span class="mark">C</span>CatalogLens<span class="version">/ 0.1</span></a><span class="local"><i></i> LOCAL WORKSPACE</span></header>
+<main>
+  <section class="intro"><div><p class="eyebrow">MERCHANT FEEDS → TRUSTED CATALOG</p><h1>Good recommendations<br>start with <em>good data.</em></h1><p class="lede">Inspect merchant feeds, trace every price and review the category decisions behind a shopping experience.</p></div><aside class="run-card"><span class="eyebrow">CURRENT SNAPSHOT</span><strong id="snapshot">Loading…</strong><span id="snapshot-date"></span><span class="sample">SYNTHETIC DEMO DATA</span></aside></section>
+  <div id="error" role="alert" hidden></div>
+  <section class="metrics" aria-label="Import quality"><article><span>RECORDS RECEIVED</span><strong id="received">—</strong><small id="feed-count">Across imported feeds</small></article><article><span>CATALOG OFFERS</span><strong id="accepted">—</strong><small>Validated and ready to search</small></article><article><span>QUARANTINED</span><strong id="rejected">—</strong><small>Invalid or conflicting records</small></article><article><span>RULE ACCURACY</span><strong id="accuracy">—</strong><small>24 labeled synthetic cases</small></article></section>
+  <nav class="tabs" aria-label="Workspace"><button class="tab active" data-panel="catalog" aria-pressed="true">01 <span>Catalog explorer</span></button><button class="tab" data-panel="quality" aria-pressed="false">02 <span>Data quality</span></button><button class="tab" data-panel="evaluation" aria-pressed="false">03 <span>Evaluation</span></button><button class="tab" data-panel="reviews" aria-pressed="false">04 <span>AI review queue</span></button></nav>
+  <section id="catalog" class="panel"><div class="section-top"><div><p class="eyebrow">SEARCH THE NORMALIZED SNAPSHOT</p><h2>Find an offer. Inspect its source.</h2></div><span id="result-count" class="pill"></span></div>
+    <form id="filters"><label class="search-field">Product keywords<input id="query" name="q" placeholder="Try wireless or laptop" maxlength="200"></label><label>Category<select id="category"><option value="">All categories</option><option>headphones</option><option>laptops</option><option>shoes</option><option>speakers</option><option>other</option></select></label><label>Maximum price · USD<input id="max-price" inputmode="decimal" placeholder="80.00"></label><button class="primary" type="submit">Search catalog <span>↗</span></button></form>
+    <p class="hint">Literal keyword matching, sorted by price. Every result comes from a stored offer; no generated prices.</p>
+    <div class="table-wrap"><table><thead><tr><th>PRODUCT / SOURCE</th><th>MERCHANT</th><th>CATEGORY</th><th class="price">PRICE · USD</th><th>TRACE</th></tr></thead><tbody id="products"></tbody></table></div>
+    <dialog id="trace"><div class="dialog-top"><h2>Offer provenance</h2><button id="close-trace" aria-label="Close provenance">✕</button></div><div id="trace-content"></div></dialog>
+  </section>
+  <section id="quality" class="panel" hidden><div class="section-top"><div><p class="eyebrow">VALIDATE BEFORE ENRICHING</p><h2>Keep bad inputs out of the catalog.</h2></div><span id="duplicates" class="pill"></span></div><p class="hint">Exact duplicate offers are collapsed. Every record in a conflicting merchant/SKU group is quarantined.</p><div id="sources" class="source-grid"></div><div class="table-wrap"><table><thead><tr><th>SOURCE</th><th>RECORD</th><th>REJECTION REASON</th></tr></thead><tbody id="issues"></tbody></table></div></section>
+  <section id="evaluation" class="panel" hidden><div class="section-top"><div><p class="eyebrow">MEASURE THE BASELINE FIRST</p><h2>A keyword hit is not always a product.</h2></div><span class="pill">RULES ONLY · NO MODEL CALLS</span></div><p class="hint">The fixture includes accessories, ambiguous names and an instruction embedded in product text. Results describe these 24 examples, not production performance.</p><div class="table-wrap"><table><thead><tr><th>CASE</th><th>PRODUCT</th><th>EXPECTED</th><th>PREDICTED</th><th>RESULT</th></tr></thead><tbody id="outcomes"></tbody></table></div></section>
+  <section id="reviews" class="panel" hidden><div class="section-top"><div><p class="eyebrow">MODEL SUGGESTIONS ≠ APPROVED FACTS</p><h2>Human review stays in the loop.</h2></div><span id="pending" class="pill"></span></div><p class="hint">Claude suggestions are optional. This read-only dashboard never sends product data to a model or approves changes. Generate and review suggestions through the CLI.</p><div id="review-items"></div></section>
+  <footer><span>CatalogLens / Independent portfolio project</span><span>Python · SQLite · Optional Claude enrichment</span></footer>
+</main>
+</body></html>
