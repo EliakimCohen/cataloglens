@@ -1,0 +1,10 @@
+[
+  {"merchant":"Harbor","sku":"H-201","title":"Aero Wireless Headphones","description":"Over-ear wireless headphones; same model sold by Northstar.","price":"74,90","currency":"usd"},
+  {"merchant":"Harbor","sku":"H-202","title":"Quiet Travel Earbuds","description":"Wireless earbuds with active noise cancellation.","price":"59.00","currency":"USD"},
+  {"merchant":"Harbor","sku":"H-203","title":"Pocket Bluetooth Speaker","description":"Portable speaker with a fabric finish.","price":29.90,"currency":"USD"},
+  {"merchant":"Harbor","sku":"H-204","title":"Everyday Sneakers","description":"Low-top sneakers with rubber soles.","price":"64.00","currency":"USD"},
+  {"merchant":"Harbor","sku":"H-205","title":"Studio Notebook","description":"Paper notebook with 160 ruled pages.","price":"8.50","currency":"USD"},
+  {"merchant":"Harbor","sku":"H-206","title":"Chromebook 13","description":"Compact Chromebook with 8 GB RAM.","price":"349.00","currency":"USD"},
+  {"merchant":"Harbor","sku":"H-207","title":"USB-C Cable","description":"One-meter charging cable.","price":"9.99","currency":"EUR"},
+  {"merchant":"Harbor","sku":"H-208","title":"Desktop Speaker","description":"Powered desktop speaker.","price":"-15.00","currency":"USD"}
+]
