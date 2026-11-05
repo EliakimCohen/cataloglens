@@ -1,0 +1,235 @@
+{
+  "provider": "rules",
+  "version": "keywords-v1",
+  "dataset_sha256": "05b7aac74b2c559085c6bc4583c32c98f7c53fb9028c85a8fab730dcf22c734d",
+  "cases": 24,
+  "correct": 18,
+  "accuracy": 0.75,
+  "other_rate": 0.1667,
+  "per_category": {
+    "headphones": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "support": 4
+    },
+    "laptops": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "support": 4
+    },
+    "shoes": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 4
+    },
+    "speakers": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "support": 4
+    },
+    "other": {
+      "precision": 0.75,
+      "recall": 0.375,
+      "support": 8
+    }
+  },
+  "outcomes": [
+    {
+      "id": "e01",
+      "title": "Wireless Headphones",
+      "expected": "headphones",
+      "predicted": "headphones",
+      "evidence": "headphones",
+      "correct": true
+    },
+    {
+      "id": "e02",
+      "title": "Travel Earbuds",
+      "expected": "headphones",
+      "predicted": "headphones",
+      "evidence": "earbuds",
+      "correct": true
+    },
+    {
+      "id": "e03",
+      "title": "Studio Headset",
+      "expected": "headphones",
+      "predicted": "headphones",
+      "evidence": "headset",
+      "correct": true
+    },
+    {
+      "id": "e04",
+      "title": "In-ear monitors",
+      "expected": "headphones",
+      "predicted": "headphones",
+      "evidence": "earphones",
+      "correct": true
+    },
+    {
+      "id": "e05",
+      "title": "Gaming Laptop 15",
+      "expected": "laptops",
+      "predicted": "laptops",
+      "evidence": "laptop",
+      "correct": true
+    },
+    {
+      "id": "e06",
+      "title": "Chromebook 13",
+      "expected": "laptops",
+      "predicted": "laptops",
+      "evidence": "chromebook",
+      "correct": true
+    },
+    {
+      "id": "e07",
+      "title": "Work Notebook",
+      "expected": "laptops",
+      "predicted": "laptops",
+      "evidence": "notebook",
+      "correct": true
+    },
+    {
+      "id": "e08",
+      "title": "SlimBook 14",
+      "expected": "laptops",
+      "predicted": "other",
+      "evidence": "",
+      "correct": false
+    },
+    {
+      "id": "e09",
+      "title": "Running Shoes",
+      "expected": "shoes",
+      "predicted": "shoes",
+      "evidence": "shoes",
+      "correct": true
+    },
+    {
+      "id": "e10",
+      "title": "Everyday Sneakers",
+      "expected": "shoes",
+      "predicted": "shoes",
+      "evidence": "sneakers",
+      "correct": true
+    },
+    {
+      "id": "e11",
+      "title": "Walking Boots",
+      "expected": "shoes",
+      "predicted": "shoes",
+      "evidence": "boots",
+      "correct": true
+    },
+    {
+      "id": "e12",
+      "title": "Court Trainers",
+      "expected": "shoes",
+      "predicted": "shoes",
+      "evidence": "trainers",
+      "correct": true
+    },
+    {
+      "id": "e13",
+      "title": "Portable Speaker",
+      "expected": "speakers",
+      "predicted": "speakers",
+      "evidence": "speaker",
+      "correct": true
+    },
+    {
+      "id": "e14",
+      "title": "Compact Soundbar",
+      "expected": "speakers",
+      "predicted": "speakers",
+      "evidence": "soundbar",
+      "correct": true
+    },
+    {
+      "id": "e15",
+      "title": "Desktop Speakers",
+      "expected": "speakers",
+      "predicted": "speakers",
+      "evidence": "speakers",
+      "correct": true
+    },
+    {
+      "id": "e16",
+      "title": "Pocket Audio Cube",
+      "expected": "speakers",
+      "predicted": "speakers",
+      "evidence": "speaker",
+      "correct": true
+    },
+    {
+      "id": "e17",
+      "title": "Laptop Sleeve",
+      "expected": "other",
+      "predicted": "laptops",
+      "evidence": "laptop",
+      "correct": false
+    },
+    {
+      "id": "e18",
+      "title": "Headphones Carry Case",
+      "expected": "other",
+      "predicted": "headphones",
+      "evidence": "headphones",
+      "correct": false
+    },
+    {
+      "id": "e19",
+      "title": "Paper Notebook",
+      "expected": "other",
+      "predicted": "laptops",
+      "evidence": "notebook",
+      "correct": false
+    },
+    {
+      "id": "e20",
+      "title": "Speaker Wall Mount",
+      "expected": "other",
+      "predicted": "speakers",
+      "evidence": "speaker",
+      "correct": false
+    },
+    {
+      "id": "e21",
+      "title": "Desk Lamp",
+      "expected": "other",
+      "predicted": "other",
+      "evidence": "",
+      "correct": true
+    },
+    {
+      "id": "e22",
+      "title": "USB-C Cable",
+      "expected": "other",
+      "predicted": "other",
+      "evidence": "",
+      "correct": true
+    },
+    {
+      "id": "e23",
+      "title": "Travel Mug",
+      "expected": "other",
+      "predicted": "other",
+      "evidence": "",
+      "correct": true
+    },
+    {
+      "id": "e24",
+      "title": "Cotton Tote",
+      "expected": "other",
+      "predicted": "headphones",
+      "evidence": "headphones",
+      "correct": false
+    }
+  ],
+  "models": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "elapsed_ms": 0,
+  "scope": "Synthetic fixture results, not an estimate of production accuracy."
+}
